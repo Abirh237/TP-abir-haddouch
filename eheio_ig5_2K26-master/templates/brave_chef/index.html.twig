@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{parent()}} - Hello TwigController!{% endblock %}
+
+{% block body %}
+ 
+     {#navbar ajoutéé ICI! #}
+     {% include 'partials/_navbar.html.twig' %}
+     <div class="example-wrapper">
+     <h1>Hello {{ controller_name }}! ✅</h1>
+
+     This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code>/var/www/html/src/Controller/BraveChefController.php</code></li>
+        <li>Your template at <code>/var/www/html/templates/brave_chef/index.html.twig</code></li>
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block stylesheets %}
+{{parent()}}
+<style>
+
+   {# body {
+      background-color:red;
+   }#}
+   </style>
+
+     {% endblock %}
+     {# {% block javascripts %}
+     {{parent()}}
+     <script>
+     alert("Hello from index.html.twig");
+     </script>
+     {% endblock %} #}
+
